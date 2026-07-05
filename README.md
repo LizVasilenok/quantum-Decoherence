@@ -57,7 +57,7 @@ D(|\psi\rangle) = \left\| \mathcal{E}(\rho) - \rho \right\|_{\text{sp}},
 where \(\|\cdot\|_{\text{sp}}\) is the spectral norm (largest singular value). This is a natural distance measure that captures the worst-case deviation over all observables.
 
 ### Worst-case state search
-We maximize \(D(|\psi\rangle)\) over all normalized state vectors \(\psi \in \mathbb{C}^4\).  
+We maximize ![D(|\psi\rangle)](https://i.upmath.me/svg/D(%7C%5Cpsi%5Crangle)) over all normalized state vectors \(\psi \in \mathbb{C}^4\).  
 The gradient of \(D\) with respect to the real and imaginary parts of the state components is computed via finite differences. Then a **steepest ascent** with line search updates the state:
 \[
 \psi \leftarrow \text{normalize}\left( \psi + \lambda \nabla D \right),
