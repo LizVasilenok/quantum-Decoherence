@@ -72,7 +72,16 @@ For any product channel \(\mathcal{E}_1 \otimes \mathcal{E}_2\) and any two-qubi
 \]
 The code performs this check numerically for the found worst-case state and for random states, confirming the correctness of the implementation.
 
-## Build and run
+## Lindblad dynamics for a physical CNOT gate
+
+Models the time evolution of a controlled‑NOT gate in a double quantum dot charge qubit (Fedichkin & Fedorov, 2003).
+
+- **Hamiltonian**: two‑qubit CNOT with tunable tunnel splitting ε_B.
+- **Noise source**: acoustic phonon reservoir.
+  - Relaxation of target qubit (σ_−) with rate Γ_B.
+  - Dephasing of control qubit (σ_z) with rate Γ_φ.
+- **Method**: small‑step Kraus‑operator decomposition (three operators K₀, K₁, K₂ per time step), ensuring complete positivity.
+- **Output**: time‑dependent probability P(|1⟩_B), decoherence metric, optimal gate time.
 
 ### Requirements
 - A C++17 compiler (GCC ≥ 9, Clang ≥ 10, or MSVC 2019+).
